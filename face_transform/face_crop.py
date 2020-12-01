@@ -12,7 +12,7 @@ detector = dlib.get_frontal_face_detector()# dlib人脸检测器
 predictor = dlib.shape_predictor(predictor_model)
 
 # cv2读取图像
-test_img_path = "../img/3.jpg"
+test_img_path = "../img/face1.jpeg"
 img = cv2.imread(test_img_path)
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # 人脸数rects
@@ -27,4 +27,4 @@ for i in range(len(rects)):
 face_images = dlib.get_face_chips(img, faces, size=320)
 for image in face_images:
     cv_bgr_img = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-    cv2.imwrite('../output/Messi_clip.png', cv_bgr_img)
+    cv2.imwrite('../output/face_clip.png', cv_bgr_img)

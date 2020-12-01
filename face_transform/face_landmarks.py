@@ -8,7 +8,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 
 # cv2读取图像
-img = cv2.imread("../img/3.jpg")
+img = cv2.imread("../img/face_clip.png")
 
 # 取灰度
 img_gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
