@@ -121,7 +121,7 @@ def eye_auto(src,intensity):
 
     # 显示
     cv2.imshow('eyescale', right_eye_scale)
-    cv2.imwrite('thin0.jpg', right_eye_scale)
+    cv2.imwrite('../output/eye_scale.jpg', right_eye_scale)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
@@ -129,7 +129,7 @@ def eye_auto(src,intensity):
 def main():
     src = cv2.imread('../img/3.jpg')
     cv2.imshow('src', src)
-    eye_auto(src,10)
+    eye_auto(src,40)
     cv2.waitKey(50)
 
 #

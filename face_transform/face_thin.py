@@ -125,12 +125,12 @@ def face_thin_auto(src):
         thin_image = localTranslationWarp(src, left_landmark[0, 0], left_landmark[0, 1], endPt[0, 0], endPt[0, 1],
                                           r_left)
         # 瘦右边脸
-        # thin_image = localTranslationWarp(src, right_landmark[0, 0], right_landmark[0, 1], endPt[0, 0],
-        #                                   endPt[0, 1], r_right)
+        thin_image = localTranslationWarp(thin_image, right_landmark[0, 0], right_landmark[0, 1], endPt[0, 0],
+                                          endPt[0, 1], r_right)
 
     # 显示
     cv2.imshow('thin', thin_image)
-    cv2.imwrite('thin0.jpg', thin_image)
+    cv2.imwrite('../output/facethin.jpg', thin_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 

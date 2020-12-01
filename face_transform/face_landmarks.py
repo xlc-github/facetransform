@@ -30,4 +30,5 @@ for i in range(len(rects)):
 
 cv2.namedWindow("img", 2)
 cv2.imshow("img", img)
+cv2.imwrite("../output/landmarks.jpg",img)
 cv2.waitKey(0)

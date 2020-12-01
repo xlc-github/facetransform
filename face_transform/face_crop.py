@@ -27,4 +27,4 @@ for i in range(len(rects)):
 face_images = dlib.get_face_chips(img, faces, size=320)
 for image in face_images:
     cv_bgr_img = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-    cv2.imwrite('Messi_clip.png', cv_bgr_img)
+    cv2.imwrite('../output/Messi_clip.png', cv_bgr_img)
